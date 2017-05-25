@@ -1,0 +1,25 @@
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+alias jsfresh='npm install && bower install'
+alias atb='atom-beta'
+export PATH="$PATH:/usr/local/mongodb/bin"
+
+#Git aliases
+alias gst='git status'
+alias ga='git add .'
+alias gc='git commit'
+alias gco='git checkout'
+alias gl='git pull'
+alias gpom="git pull origin master"
+alias gp='git push'
+alias gd='git diff | mate'
+alias gb='git branch'
+alias gba='git branch -a'
+alias del='git branch -d'
+
+function newbranch() {
+   git checkout -b $1 && git push -u origin $1
+}
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
